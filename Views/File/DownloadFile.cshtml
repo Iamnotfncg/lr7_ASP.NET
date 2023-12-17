@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "DownloadFile";
+}
+
+<h2>Форма завантаження файлу</h2>
+
+<form method="post">
+    <div>
+        <label for="firstName">Ім'я:</label>
+        <input type="text" name="firstName" required />
+    </div>
+    <div>
+        <label for="lastName">Прізвище:</label>
+        <input type="text" name="lastName" required />
+    </div>
+    <div>
+        <label for="fileName">Назва файлу:</label>
+        <input type="text" name="fileName" required />
+    </div>
+    <div>
+        <input type="submit" value="Продовжити" />
+    </div>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color: red;">@ViewBag.Error</p>
+}
